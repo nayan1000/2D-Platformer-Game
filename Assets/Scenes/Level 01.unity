@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 379921873}
+  boxCollider: {fileID: 379921877}
 --- !u!61 &379921877
 BoxCollider2D:
   m_ObjectHideFlags: 0
