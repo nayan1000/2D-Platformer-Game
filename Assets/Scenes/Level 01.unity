@@ -227,7 +227,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.13809964}
+  m_Offset: {x: 0, y: -0.10960576}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -238,7 +238,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.7238007}
+  m_Size: {x: 1, y: 0.7807885}
   m_EdgeRadius: 0
 --- !u!212 &1023048967
 SpriteRenderer:
@@ -300,7 +300,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1023048965}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.11, z: 0}
+  m_LocalPosition: {x: -0.06, y: -1.12, z: 0}
   m_LocalScale: {x: 3.7, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -403,6 +403,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5054911820747218729, guid: ca9731f260383f046a7a4a83aa71c197,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054911820747218729, guid: ca9731f260383f046a7a4a83aa71c197,
+        type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054911820747218729, guid: ca9731f260383f046a7a4a83aa71c197,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5793380307096063509, guid: ca9731f260383f046a7a4a83aa71c197,
         type: 3}
       propertyPath: m_RootOrder
@@ -410,13 +425,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5793380307096063509, guid: ca9731f260383f046a7a4a83aa71c197,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.975
+      objectReference: {fileID: 0}
+    - target: {fileID: 5793380307096063509, guid: ca9731f260383f046a7a4a83aa71c197,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1077
+      objectReference: {fileID: 0}
+    - target: {fileID: 5793380307096063509, guid: ca9731f260383f046a7a4a83aa71c197,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.0394
       objectReference: {fileID: 0}
     - target: {fileID: 5793380307096063509, guid: ca9731f260383f046a7a4a83aa71c197,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.06
+      value: -0.3345
       objectReference: {fileID: 0}
     - target: {fileID: 5793380307096063509, guid: ca9731f260383f046a7a4a83aa71c197,
         type: 3}

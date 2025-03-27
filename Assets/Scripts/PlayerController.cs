@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnimationController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     [SerializeField] Animator animator;
     [SerializeField] BoxCollider2D boxCollider;
@@ -17,19 +17,10 @@ public class AnimationController : MonoBehaviour
 
     private void Update()
     {
-        float speed = Input.GetAxisRaw("Horizontal");
+        float horizontalInput = Input.GetAxisRaw("Horizontal");
         float verticalInput = Input.GetAxisRaw("Vertical");
-        Vector2 scale= transform.localScale;
-        animator.SetFloat("Speed",Mathf.Abs(speed));
-        
-        if(speed < 0)
-        {
-            scale.x= -1f* Mathf.Abs( speed );
-        }else if (speed > 0)
-        {
-            scale.x=Mathf.Abs(speed);
-        }
-        transform.localScale = scale;
+
+        PlayMovementAnimation(horizontalInput);
 
         PlayJumpAnimation(verticalInput);
 
@@ -73,5 +64,21 @@ public class AnimationController : MonoBehaviour
             boxCollider.size = boxcolSize;
         }
             animator.SetBool("Crouch", crouch);
+    }
+
+    private void PlayMovementAnimation(float horizontal)
+    {
+        Vector2 scale = transform.localScale;
+        animator.SetFloat("Speed", Mathf.Abs(horizontal));
+
+        if (horizontal < 0)
+        {
+            scale.x = -1f * Mathf.Abs(horizontal);
+        }
+        else if (horizontal > 0)
+        {
+            scale.x = Mathf.Abs(horizontal);
+        }
+        transform.localScale = scale;
     }
 }
