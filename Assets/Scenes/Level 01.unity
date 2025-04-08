@@ -123,79 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &379921872 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 671980021815052640, guid: ca9731f260383f046a7a4a83aa71c197,
-    type: 3}
-  m_PrefabInstance: {fileID: 9126242704371014800}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &379921873 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 4021036039593145075, guid: ca9731f260383f046a7a4a83aa71c197,
-    type: 3}
-  m_PrefabInstance: {fileID: 9126242704371014800}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &379921876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 379921872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db7678e40e3b5954eb05080cdaacccf7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 379921873}
-  boxCollider: {fileID: 379921877}
---- !u!61 &379921877
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 379921872}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0030706376, y: 0.97918415}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.42, y: 0.1}
-    oldSize: {x: 3.7534883, y: 2.8325582}
-    newSize: {x: 3.7534883, y: 2.8325582}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.48371682, y: 2.0240083}
-  m_EdgeRadius: 0
---- !u!50 &379921878
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 379921872}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &1023048965
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,7 +136,7 @@ GameObject:
   - component: {fileID: 1023048966}
   m_Layer: 0
   m_Name: platform
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -301,7 +228,7 @@ Transform:
   m_GameObject: {fileID: 1023048965}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.06, y: -1.12, z: 0}
-  m_LocalScale: {x: 3.7, y: 1, z: 1}
+  m_LocalScale: {x: 11.0075, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -398,40 +325,19 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 379921876, guid: ca9731f260383f046a7a4a83aa71c197, type: 3}
+      propertyPath: jumpForce
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 671980021815052640, guid: ca9731f260383f046a7a4a83aa71c197,
         type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5054911820747218729, guid: ca9731f260383f046a7a4a83aa71c197,
-        type: 3}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5054911820747218729, guid: ca9731f260383f046a7a4a83aa71c197,
-        type: 3}
-      propertyPath: m_FlipY
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5054911820747218729, guid: ca9731f260383f046a7a4a83aa71c197,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5793380307096063509, guid: ca9731f260383f046a7a4a83aa71c197,
         type: 3}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5793380307096063509, guid: ca9731f260383f046a7a4a83aa71c197,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.975
-      objectReference: {fileID: 0}
-    - target: {fileID: 5793380307096063509, guid: ca9731f260383f046a7a4a83aa71c197,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.1077
       objectReference: {fileID: 0}
     - target: {fileID: 5793380307096063509, guid: ca9731f260383f046a7a4a83aa71c197,
         type: 3}

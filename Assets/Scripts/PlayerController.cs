@@ -8,7 +8,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] BoxCollider2D boxCollider;
     private Vector2 boxcolSize;
     private Vector2 boxcolOffset;
-
+    public float speed;
+   
     private void Start()
     {
         boxcolSize= boxCollider.size;
@@ -20,9 +21,7 @@ public class PlayerController : MonoBehaviour
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         float verticalInput = Input.GetAxisRaw("Vertical");
 
-        PlayMovementAnimation(horizontalInput);
-
-        PlayJumpAnimation(verticalInput);
+        PlayMovementAnimation(horizontalInput, speed);
 
         if (Input.GetKey(KeyCode.LeftControl))
         {
@@ -32,18 +31,18 @@ public class PlayerController : MonoBehaviour
         {
             PlayCrouchAnimation(false);
         }
-            
-    }
 
-
-    private void PlayJumpAnimation(float verticalInput)
-    {
-        if (verticalInput > 0)
+        if(verticalInput > 0)
         {
-            animator.SetTrigger("Jump");
+            PlayJumpAnimation();
         }
-       
     }
+
+    private void PlayJumpAnimation()
+    {
+        animator.SetTrigger("Jump");
+    }
+  
 
     private void PlayCrouchAnimation(bool crouch)
     {
@@ -66,11 +65,12 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("Crouch", crouch);
     }
 
-    private void PlayMovementAnimation(float horizontal)
+    private void PlayMovementAnimation(float horizontal, float speed)
     {
         Vector2 scale = transform.localScale;
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
-
+        Vector3 position = transform.position;
+        position.x += horizontal * speed * Time.deltaTime;
         if (horizontal < 0)
         {
             scale.x = -1f * Mathf.Abs(horizontal);
@@ -80,5 +80,8 @@ public class PlayerController : MonoBehaviour
             scale.x = Mathf.Abs(horizontal);
         }
         transform.localScale = scale;
+        transform.position=position;
     }
+
+  
 }
